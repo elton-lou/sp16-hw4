@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get "users", to: "users#index"
-  get "users/new", to: "users#new"
-  get "users/:id", to: "users#show", as: :user
-  post "users", to: "users#create"
+  get "dogs", to: "dogs#index"
+  get "dogs/new", to: "dogs#new"
+  get "dogs/:id/edit", to: "dogs#edit"
+  get "dogs/:id", to: "dogs#show", as: :dog
+  patch "dogs/:id", to: "dogs#update"
+  post "dogs", to: "dogs#create"
+  delete "dogs/:id", to: "dogs#destroy"
 end
